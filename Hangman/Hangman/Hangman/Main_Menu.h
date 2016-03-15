@@ -54,12 +54,15 @@ int Welcome_Message()
 				return 0;
 			}
 
+
+			else cout << "That selection is invalid. " << endl;
+
 			break;
 
+			}
 
-		default: cout << "That selection is invalid. " << endl;
 
-		} 
+		 
 
 
 	} while (selection != 0);
