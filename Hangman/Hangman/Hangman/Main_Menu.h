@@ -8,14 +8,14 @@ using namespace std;
 
 int Welcome_Message()
 {
-	char selection;
-	int letters;
+	int selection;
+	int num_Letters;
 
 	cout << "Welcome to Hangman! " << endl;
 
 	cout << "This is classic Hangman, please choose an option." << endl;
 
-	do {
+
 		cout << "================================" << endl;
 		cout << "(1) New Game" << endl;
 		cout << "(2) Stats" << endl;
@@ -25,15 +25,15 @@ int Welcome_Message()
 
 		cin >> selection;
 
+
 		switch (selection) {
 
 		case 1:
-
-			cout << "New Game" << '(1)' << endl;
-			if (selection == '1') {
+			cout << "New Game" << endl;
+			if (selection == 1) {
 				cout << "Welcome to Hangman. " << endl;
 				cout << " Choose how many letters you would like to solve for. " << endl;
-				cin >> letters;
+				cin >> num_Letters;
 			}
 			break;
 
@@ -65,7 +65,7 @@ int Welcome_Message()
 		 
 
 
-	} while (selection != 0);
+	
 
 
 }
