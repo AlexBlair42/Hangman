@@ -11,9 +11,4 @@ private:
 
 	int number_Of_Letters;
 
-
-
-
-
-
 };

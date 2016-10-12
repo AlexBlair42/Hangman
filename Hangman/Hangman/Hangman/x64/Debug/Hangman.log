@@ -1,0 +1,4 @@
+﻿  Main.cpp
+c:\users\kath\desktop\hangman\hangman\hangman\hangman\main_menu.h(55): warning C4715: 'Welcome_Message': not all control paths return a value
+  Hangman.vcxproj -> C:\Users\Kath\Desktop\Hangman\Hangman\Hangman\x64\Debug\Hangman.exe
+  Hangman.vcxproj -> C:\Users\Kath\Desktop\Hangman\Hangman\Hangman\x64\Debug\Hangman.pdb (Full PDB)

@@ -1,71 +1,55 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "Game.h"
+#include "Stats.h"
 using namespace std;
-
-
-
 
 int Welcome_Message()
 {
-	int selection;
+	string selection;
 	int num_Letters;
+	bool accepted = true;
 
 	cout << "Welcome to Hangman! " << endl;
 
-	cout << "This is classic Hangman, please choose an option." << endl;
+	do {
+		do {
+			cout << "This is classic Hangman, please choose an option." << endl;
 
+			cout << "================================" << endl;
+			cout << "(1) New Game" << endl;
+			cout << "(2) Stats" << endl;
+			cout << "(3) Exit" << endl;
+			cout << "================================" << endl;
+			cin >> selection;
 
-		cout << "================================" << endl;
-		cout << "(1) New Game" << endl;
-		cout << "(2) Stats" << endl;
-		cout << "(3) Exit" << endl;
-		cout << "================================" << endl;
+		} while (selection != "1" && selection != "2" && selection != "3");
 
+		int select = selection[0] - '0';
+		switch (select) {
 
-		cin >> selection;
-
-
-		switch (selection) {
-
-		case 1:
-			cout << "New Game" << endl;
-			if (selection == 1) {
-				cout << "Welcome to Hangman. " << endl;
-				cout << " Choose how many letters you would like to solve for. " << endl;
-				cin >> num_Letters;
-			}
+		case 1:	cout << "New Game" << endl;
+			cout << "Choose how many letters you would like to solve for." << endl;
+			cin >> num_Letters;
+			system("cls");
+			//function for the game passing in parameters of the num_letters or difficulty level? 
 			break;
 
-		case 2:
-
-			cout << "Stats " << '(2)' << endl;
-			if (selection == '2') {
-				cout << "Here are some stats! " << endl;
-				cout << "Just kidding I need to implement this! XD " << endl;
-			}
-
+		case 2:	system("cls");
+			cout << "TOP TEN" << endl;
+			cout << "================================" << endl;
+			//function that pulls up the top 10 stats for that machine (create files)
+			system("pause");
 			break;
 
-		case 3:
+		case 3:	cout << "Exit" << endl;
+			return 0;
 
-			cout << "Exit" << '(3)' << endl;
-			if (selection == '3') {
-				return 0;
-			}
-
-
-			else cout << "That selection is invalid. " << endl;
-
+		default: cout << "That selection is invalid. Try a different menu option." << endl;
+			system("pause");
 			break;
-
-			}
-
-
-		 
-
-
-	
-
-
+		}
+		system("cls");	//keep screen clean and looking nice
+	} while (selection != "3");
 }
